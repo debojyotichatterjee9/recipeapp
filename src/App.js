@@ -22,6 +22,11 @@ class App extends Component {
     //console.log(data.recipes[0].publisher);
     //console.log(recipeName);
   }
+
+  componentDidUpdate = () =>{
+    
+  }
+
   render() {
     return (
       <div className="App">
