@@ -31,8 +31,15 @@ class Item extends React.Component{
                                 Publisher: <span>{ recipe.publisher }</span>
                             </h4>
                             <p className="active-recipe__website">
-                                Website: <span><a href={ recipe.publisher_url } target="_blank">Click to open</a></span>
+                            View Ingredients:<span><a href={ recipe.f2f_url } target="_blank">Click Here...</a></span>
                             </p>
+                            <p className="active-recipe__website">
+                            Detailed Recipe:<span><a href={ recipe.source_url } target="_blank">Click Here...</a></span>
+                            </p>
+                            <p className="active-recipe__website">
+                            Visit Website: <span><a href={ recipe.publisher_url } target="_blank">Click to open</a></span>
+                            </p>
+                           
                         <button className="active-recipe__button">
                         <Link to="/">Home</Link>
                         </button>
