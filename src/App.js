@@ -23,8 +23,16 @@ class App extends Component {
     //console.log(recipeName);
   }
 
+  componentDidMount = () =>{
+    const grab = localStorage.getItem("recipes"); //grabbing the state
+    const recipes = JSON.parse(grab); //converting into JSOn format
+    if(grab!=null)
+    this.setState({ recipes });
+  }
+
   componentDidUpdate = () =>{
-    
+    const recipes = JSON.stringify(this.state.recipes); //converting the state
+    localStorage.setItem("recipes", recipes); //saving the state in the local storage
   }
 
   render() {
